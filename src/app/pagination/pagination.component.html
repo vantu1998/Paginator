@@ -1,0 +1,12 @@
+<mat-paginator [length]="length" [pageIndex]="pageIndex" [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize">
+</mat-paginator>
+<nav>
+  <ul class="pagination">
+    <li class="page-item"><button class="page-link" (click)="goToFirstPage()">First</button></li>
+    <li class="page-item"><button class="page-link mr-1" (click)="goToPreviousPage()">Previous</button></li>
+    <li class="page-item" *ngFor="let i of pageItems;index as index"><button class="page-link mr-1 ml-1"
+        (click)="goToPage(i)">{{i}}</button></li>
+    <li class="page-item"><button class="page-link ml-1" (click)="goToNextPage()">Next</button></li>
+    <li class="page-item"><button class="page-link" (click)="goToLastPage()">Last</button></li>
+  </ul>
+</nav>
